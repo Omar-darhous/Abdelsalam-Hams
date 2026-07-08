@@ -1,0 +1,130 @@
+.love-story {
+  padding: 4rem 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.love-story__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.love-story__item {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.love-story__icon-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 48px;
+}
+
+.love-story__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background: rgba(197, 160, 89, 0.05);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.love-story__item:hover .love-story__icon {
+  transform: scale(1.1);
+  box-shadow: 0 0 16px rgba(197, 160, 89, 0.3);
+}
+
+.love-story__line {
+  width: 1px;
+  flex: 1;
+  min-height: 40px;
+  background: rgba(154, 163, 181, 0.3);
+  margin: 0.5rem 0;
+  transform-origin: top;
+  animation: line-grow 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.love-story__content {
+  padding-bottom: 2.5rem;
+}
+
+.love-story__year {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+}
+
+.love-story__event-title {
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.love-story__desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 380px) {
+  .love-story {
+    padding: 3rem 1rem;
+  }
+
+  .love-story__item {
+    gap: 1rem;
+  }
+
+  .love-story__icon-wrap {
+    width: 40px;
+  }
+
+  .love-story__icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .love-story__desc {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .love-story {
+    padding: 5rem 2.5rem;
+    max-width: 640px;
+  }
+
+  .love-story__icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.4rem;
+  }
+
+  .love-story__icon-wrap {
+    width: 56px;
+  }
+
+  .love-story__year {
+    font-size: 1.25rem;
+  }
+
+  .love-story__event-title {
+    font-size: 1.15rem;
+  }
+
+  .love-story__desc {
+    font-size: 0.95rem;
+  }
+}

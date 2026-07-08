@@ -1,0 +1,56 @@
+.quote-section {
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.quote-section__mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: rgba(154, 163, 181, 0.2);
+  line-height: 0.5;
+  margin-bottom: 1rem;
+}
+
+.quote-section__text {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-style: italic;
+  color: var(--text-light);
+  line-height: 1.8;
+  max-width: 400px;
+  margin: 0 auto 1.5rem;
+}
+
+.quote-section__names {
+  font-size: 1.6rem;
+  color: var(--gold);
+}
+
+@media (max-width: 380px) {
+  .quote-section {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .quote-section__mark {
+    font-size: 3rem;
+  }
+
+  .quote-section__names {
+    font-size: 1.35rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .quote-section {
+    padding: 4rem 2.5rem;
+  }
+
+  .quote-section__text {
+    max-width: 520px;
+    font-size: 1.25rem;
+  }
+
+  .quote-section__names {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,213 @@
+.save-the-date {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem 3rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.save-the-date__corner {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  pointer-events: none;
+}
+
+.save-the-date__corner--tl {
+  top: 80px;
+  left: -40px;
+  border-right: none;
+  border-bottom: none;
+  transform: rotate(15deg);
+}
+
+.save-the-date__corner--br {
+  bottom: 40px;
+  right: -40px;
+  border-left: none;
+  border-top: none;
+  transform: rotate(15deg);
+}
+
+.save-the-date__title {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  animation: title-glow 4s ease-in-out infinite;
+}
+
+@keyframes title-glow {
+  0%, 100% { text-shadow: 0 0 0 rgba(197, 160, 89, 0); }
+  50% { text-shadow: 0 0 20px rgba(197, 160, 89, 0.35); }
+}
+
+.save-the-date__the {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  letter-spacing: 0;
+  margin: 0 0.25rem;
+}
+
+.save-the-date__subtitle {
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.save-the-date__divider {
+  margin-bottom: 2rem;
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+.save-the-date__divider::before,
+.save-the-date__divider::after {
+  content: '';
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin: 0 0.75rem;
+}
+
+.save-the-date__names {
+  margin-bottom: 2rem;
+}
+
+.save-the-date__name {
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  color: var(--gold);
+  letter-spacing: 0.2em;
+  font-weight: 500;
+}
+
+.save-the-date__and {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.save-the-date__and-line {
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.save-the-date__and-text {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--text-light);
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--gold);
+  clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+}
+
+.save-the-date__venue {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+
+.save-the-date__venue p {
+  margin: 0;
+}
+
+.save-the-date__map-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.save-the-date__map-link:hover {
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+.save-the-date__sparkles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(197, 160, 89, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.save-the-date__particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.save-the-date__particle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+@media (max-width: 380px) {
+  .save-the-date {
+    padding: 5rem 1rem 2rem;
+    min-height: 100svh;
+  }
+
+  .save-the-date__subtitle {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+  }
+
+  .save-the-date__divider::before,
+  .save-the-date__divider::after {
+    width: 40px;
+  }
+
+  .save-the-date__and-line {
+    width: 20px;
+  }
+
+  .save-the-date__venue {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .save-the-date {
+    padding: 7rem 2.5rem 4rem;
+    min-height: 90vh;
+  }
+
+  .save-the-date__corner {
+    width: 160px;
+    height: 160px;
+  }
+
+  .save-the-date__subtitle {
+    font-size: 0.8rem;
+  }
+
+  .save-the-date__venue {
+    font-size: 1.15rem;
+  }
+}
